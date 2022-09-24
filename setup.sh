@@ -1,14 +1,8 @@
-mkdir -p ~/.streamlit
-
-echo "\
-[genera]\n\
-email = \"michaelliem1999@gmail.com\"\n\
-"> ~/.streamlit/credentials.toml
-
+mkdir -p ~/.streamlit/
 echo "\
 [server]\n\
 headless = true\n\
-enableXsrfProtection = false\n\
-enableCORS = false\n\
 port = $PORT\n\
+enableCORS = false\n\
+\n\
 " > ~/.streamlit/config.toml

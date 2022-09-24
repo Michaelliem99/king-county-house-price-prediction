@@ -1,2 +1,7 @@
-pandas
 streamlit
+pandas
+numpy
+altair
+xlrd
+openpyxl
+streamlit_analytics
