@@ -16,7 +16,7 @@ bathrooms = col2.number_input("Enter number of bathrooms", min_value=1.0, max_va
 floor = col1.number_input("Enter number of floors", min_value=1.0, max_value=7.0, step=0.5)
 waterfront = col2.selectbox("Does the house has waterfront view?", ['Yes', 'No'])
 condition = col1.number_input("Enter house condition score", min_value=1, max_value=5, step=1)
-grade = col2.number_input("Enter house grade score", min_value=1, max_value=13, step=1
+grade = col2.number_input("Enter house grade score", min_value=1, max_value=13, step=1)
 
 df_pred = pd.DataFrame({
     'sqft_living15':sqft_living, 'sqft_lot15':sqft_lot, 
