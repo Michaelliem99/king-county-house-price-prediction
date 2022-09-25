@@ -6,7 +6,9 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression
 import xgboost as xgb
 
-st.write("House Price Prediction")
+st.header("House Price Prediction")
+st.caption("Here is my first streamlit app. It is a house price prediction for King County area.")
+st.caption("Github Repository: <a href='https://github.com/Michaelliem99/king-county-house-price-prediction'>King County House Price Prediction</a> <br>Dataset: <a href='https://www.kaggle.com/datasets/harlfoxem/housesalesprediction'>House Sales in King County, USA</a>", unsafe_allow_html=True)
 
 age = st.number_input("Enter the age of the house:", step=1)
 col1, col2 = st.columns(2)
