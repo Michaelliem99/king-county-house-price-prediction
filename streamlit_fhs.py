@@ -4,6 +4,7 @@ import pandas as pd
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression
+import xgboost as xgb
 
 st.write("House Price Prediction")
 
@@ -23,7 +24,7 @@ df_pred = pd.DataFrame({
     'bedrooms':bedrooms, 'bathrooms':bathrooms, 
     'floor':floor, 'waterfront':waterfront,
     'condition':condition, 'grade':grade
-})
+}, index=[0])
 
 waterfront_mapping = {'Yes':1, 'No':0}
 df_pred['waterfront'] = df_pred['waterfront'].replace(waterfront_mapping)
@@ -32,4 +33,4 @@ model = joblib.load('xgb_pipe.sav')
 prediction = model.predict(df_pred)
 
 if st.button('Predict'):
-    st.write('Your predicted house price is {}'.format(prediction))
+    st.write('Your predicted house price is {}'.format(prediction[0]))
